@@ -76,6 +76,24 @@ public class frag_feed extends Fragment
                         post.setContent(jsonObject.getJSONObject("content").getString("rendered"));
                         post.setTitle(jsonObject.getJSONObject("title").getString("rendered"));
                         post.setLink(jsonObject.getString("link"));
+                        post.setAuthor(jsonObject.getJSONObject("_links").getJSONArray("author").getJSONObject(0).getString("href"));
+
+                        JSONArray categoriasJsonArray = jsonObject.getJSONArray("categories");
+                        String categorias = "";
+                        for (int j = 0; j < categoriasJsonArray.length(); j++)
+                        {
+                            categorias+=categoriasJsonArray.getString(j)+"##";
+                        }
+                        post.setCategories(categorias);
+
+                        JSONArray tagsJsonArray = jsonObject.getJSONArray("tags");
+                        String tags = "";
+                        for (int j = 0; j < tagsJsonArray.length(); j++)
+                        {
+                            tags+=tagsJsonArray.getString(j)+"##";
+                        }
+                        post.setTags(tags);
+
                         post.save();
                         posts.add(post);
 

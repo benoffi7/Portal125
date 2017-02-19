@@ -23,6 +23,16 @@ public class Post extends Model
     String author;
     @Column (name = "tags")
     String tags;
+    @Column (name = "categories")
+    String categories;
+
+    public String getCategories() {
+        return categories;
+    }
+
+    public void setCategories(String categories) {
+        this.categories = categories;
+    }
 
     public String getDate() {
         return date;

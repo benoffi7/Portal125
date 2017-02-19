@@ -33,6 +33,7 @@ repositories {
     mavenCentral()
     maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
     maven { url 'https://maven.fabric.io/public' }
+    maven { url "https://jitpack.io" }
 }
 
 
@@ -50,5 +51,6 @@ dependencies {
     compile 'com.adammcneilly:actioncardview:1.0.0'
     compile 'com.android.support:recyclerview-v7:25.1.1'
     compile 'com.android.support:design:25.1.1'
+    compile 'com.github.everseat:TextViewLabel:0.1'
     testCompile 'junit:junit:4.12'
 }

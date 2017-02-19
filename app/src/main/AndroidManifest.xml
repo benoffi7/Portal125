@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="AA_DB_NAME"
-            android:value="Pickrand.db"/>
+            android:value="Pickrand003.db"/>
         <meta-data
             android:name="AA_DB_VERSION"
             android:value="5"/>
@@ -23,11 +23,7 @@
 
         <activity
             android:name=".PostActivity"
-            android:parentActivityName=".FeedActivity"
             android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.coffeeandcookies.portal125.FeedActivity"/>
         </activity>
         <activity
             android:name=".MainActivity"
